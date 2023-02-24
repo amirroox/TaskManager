@@ -96,9 +96,9 @@
     </div>
 </div>
 <!-- partial -->
-<script src='../assets/vendor/jquery.min.js'></script>
-<script src='../assets/vendor/sweetalert2.js'></script>
-<script src="../assets/js/script.js"></script>
+<script src='<?=site_url('assets/vendor/jquery.min.js')?>'></script>
+<script src='<?=site_url('assets/vendor/sweetalert2.js')?>'></script>
+<script src="<?=site_url('assets/js/script.js')?>"></script>
 
 </body>
 </html>
