@@ -3,7 +3,8 @@
     "description": "Task Manager - tudoList",
     "type": "project",
     "require": {
-        "hekmatinasser/verta": "^8.3"
+        "hekmatinasser/verta": "^8.3",
+      "ext-pdo": "*"
     },
     "license": "MIT",
     "authors": [
