@@ -48,3 +48,347 @@
     url('../fonts/ttf/Shabnam-Medium.ttf') format('truetype');
     font-weight: 500;
 }
+
+body {
+
+    background-repeat: repeat-x;
+    padding: 0;
+    margin: 0;
+    font-family: Shabnam , sans-serif;
+    font-size: 14px;
+}
+.page {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    background-color: rgba(255, 255, 255, 0.7);
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.pageHeader {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #8054cd;
+    color: White;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 5px 20px;
+    vertical-align: middle;
+    border-radius: 30px 30px 0 0 ;
+}
+.pageHeader .title {
+    width: 40%;
+    float: left;
+    line-height: 40px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.pageHeader .userPanel {
+    width: 40%;
+    float: right;
+}
+.pageHeader .userPanel i {
+    float: right;
+    line-height: 40px;
+    padding-right: 10px;
+}
+.pageHeader .userPanel .username {
+    float: right;
+    line-height: 40px;
+    padding: 0 20px;
+    font-weight: 600;
+    font-size: 1.0em;
+}
+.pageHeader .userPanel img {
+    float: right;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    clear: both;
+    background-color: white;
+    border-radius: 0 0 30px 30px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.main .nav {
+    width: 200px;
+    height: 100%;
+    float: left;
+    background-color: rgba(227, 234, 235, 0.8);
+    border-radius: 0 0 0 30px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.main::-webkit-scrollbar , .main .nav::-webkit-scrollbar {
+    width: 7px;               /* width of the entire scrollbar */
+}
+
+.main::-webkit-scrollbar-track , .main .nav::-webkit-scrollbar-track {
+    background: #8054cd;        /* color of the tracking area */
+}
+.main::-webkit-scrollbar-thumb , .main .nav::-webkit-scrollbar-thumb {
+    background-color: blue;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid deeppink;  /* creates padding around scroll thumb */
+}
+.main .nav .searchbox {
+    width: 170px;
+    height: 30px;
+    line-height: 30px;
+    margin: 15px;
+    background-color: White;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.main .nav .searchbox i {
+    display: inline-block;
+    color: #bbb;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 16px;
+}
+.main .nav .searchbox input {
+    display: inline-block;
+    width: 120px;
+    background-color: White;
+    color: Black;
+    font-family: Shabnam , sans-serif;
+    border: 0;
+    outline: none;
+}
+.main .nav .folderbox {
+    display: flex;
+    justify-content: space-between;
+    width: 170px;
+    height: 30px;
+    line-height: 30px;
+    margin: 15px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.main .nav .folderbox button {
+    display: inline-block;
+    color: #c53fec;
+    font-size: 20px;
+}
+.main .nav .folderbox input {
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+    height: 94%;
+    background-color: White;
+    color: Black;
+    font-family: Shabnam , sans-serif;
+    border: 0;
+    outline: none;
+}
+.main .nav .menu {
+    width: 100%;
+    margin: 15px;
+    color: #555;
+}
+.main .nav .menu .title {
+    font-weight: 700;
+    font-size: 1.0em;
+    text-transform: uppercase;
+}
+.main .nav .menu ul {
+    padding-left: 0;
+}
+.main .nav .menu ul li {
+    cursor: pointer;
+    list-style: none;
+    margin: 5px 30px 5px 0;
+    padding: 10px 5px;
+    font-weight: 600;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    transition: 0.25s all;
+    display: flex;
+    justify-content: space-between;
+}
+.main .nav .menu ul li.deactivate {
+    color: #7232b7
+}
+.main .nav .menu ul li.active {
+    color: #bc46b2;
+}
+.main .nav .menu ul li:hover {
+    background-color: #999;
+}
+.main .nav .menu ul li i {
+    font-size: 1.4em;
+    margin-right: 10px;
+}
+.main .view {
+    position: relative;
+    margin-left: 200px;
+}
+.main .view .viewHeader {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    /*padding: 20px 20px;*/
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #E0E0E0;
+}
+.main .view .viewHeader .title {
+    float: left;
+    font-size: 1.4em;
+    font-weight: 400;
+    padding: 0;
+    color: #AAA;
+    margin-left: 20px;
+}
+.main .view .viewHeader .functions {
+    /*float: right;*/
+}
+.main .view .viewHeader .functions form {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.main .view .viewHeader .functions form input {
+    width: 150%;
+    font-family: Shabnam,sans-serif;
+}
+.main .view .viewHeader .functions form input , .main .view .viewHeader .functions .button {
+    line-height: 30px;
+    float: right;
+    text-align: center;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background-color: pink;
+    border-radius: 4px;
+    margin: 10px 5px;
+    padding: 0 20px;
+    font-weight: 600;
+    font-size: 17px;
+    border: none;
+    outline: none;
+}
+.main .view .viewHeader .functions .button {
+    cursor: pointer;
+    color: white;
+}
+.main .view .viewHeader .functions .button.active {
+    background-color: #6454cd;
+}
+.main .view .viewHeader .functions .button.inverz {
+    background-color: inherit;
+    border: 1px solid #AAA;
+    width: 10px;
+    color: #AAA;
+    font-size: 1.3em;
+    padding-left: 10px;
+    padding-right: 16px;
+}
+.main .view .content {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    /*overflow: hidden;*/
+}
+.main .view .content .list .title {
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #54b9cd;
+}
+.main .view .content .list ul {
+    width: 100%;
+    padding-left: 10px;
+    color: #777;
+}
+.main .view .content .list ul li {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    list-style: none;
+    border-top: 1px solid #AAA;
+}
+.main .view .content .list ul li.checked {
+    background-color: #F0F4F5;
+}
+.main .view .content .list ul li:last-child {
+    border-bottom: 1px solid #AAA;
+}
+.main .view .content .list ul li i {
+    float: left;
+    width: 30px;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 10px;
+    font-size: 1.3em;
+}
+.main .view .content .list ul li span {
+    float: left;
+    font-weight: 600;
+}
+.main .view .content .list ul li .info {
+    float: right;
+}
+.main .view .content .list ul li .info span {
+    font-weight: 300;
+}
+.main .view .content .list ul li .info .button {
+    float: right;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #AAA;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin: 10px 10px;
+    text-align: center;
+    cursor: pointer;
+    color: White;
+    font-weight: 700;
+}
+.main .view .content .list ul li .info .button.green {
+    background-color: #57a8c1;
+}
+
+.clear {
+    clear: both;
+}
+#profile-img {
+    width: 40px;
+    height: 40px;
+}
+
+a {
+    color: unset;
+    text-decoration: unset;
+}
+.a_delete i:hover {
+    font-weight: bolder;
+}
+.isDone:hover {
+    cursor: pointer;
+}
