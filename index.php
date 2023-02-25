@@ -3,6 +3,10 @@
 include "bootstrap/init.php";
 //$current_self_page = $_SERVER['PHP_SELF'] ;
 
+if(!is_Loggin()){
+    header('Location:'.site_url('auth.php'));
+}
+
 /* Delete Folder Validation */
 if(isset($_GET['Delete_folder']) && is_numeric($_GET['Delete_folder'])) {
     delete_folder($_GET['Delete_folder']);

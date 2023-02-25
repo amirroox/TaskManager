@@ -1,4 +1,4 @@
-
+/* Script For Task Manager(Main Menu) */
 let add_Folder = $('#add_folder');
 let name_Folder = $('#name_folder');
 let container = $('#Result_ajax');
@@ -120,3 +120,22 @@ $('.isDone').on('click',function (){
         }
     });
 });
+
+/* Script For Auth Page */
+
+let signInBtn = document.getElementById("signIn");
+let signUpBtn = document.getElementById("signUp");
+let fistForm = document.getElementById("form1");
+let secondForm = document.getElementById("form2");
+let container_auth = document.querySelector(".container");
+
+signInBtn.addEventListener("click", () => {
+    container_auth.classList.remove("right-panel-active");
+});
+
+signUpBtn.addEventListener("click", () => {
+    container_auth.classList.add("right-panel-active");
+});
+
+fistForm.addEventListener("submit", (e) => e.preventDefault());
+secondForm.addEventListener("submit", (e) => e.preventDefault());
