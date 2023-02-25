@@ -1,3 +1,4 @@
+<?php if(isset($_SESSION['user_login'])) header('Location:'.site_url('index.php')); ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,16 +13,16 @@
 <div class="container right-panel-active">
     <!-- Sign Up -->
     <div class="container__form container--signup">
-        <form action="#" class="form" id="form1">
+        <form action="<?=site_url('auth.php?action=signup')?>" method="post" class="form" id="form1">
             <h2 class="form__title">Sign Up</h2>
             <label>
-                <input type="text" placeholder="User" class="input" />
+                <input type="text" name="user-up" placeholder="User" class="input" required />
             </label>
             <label>
-                <input type="email" placeholder="Email" class="input" />
+                <input type="email" name="email-up" placeholder="Email" class="input" required />
             </label>
             <label>
-                <input type="password" placeholder="Password" class="input" />
+                <input type="password" name="pass-up" placeholder="Password" class="input" required />
             </label>
             <button class="btn">Sign Up</button>
         </form>
@@ -29,13 +30,13 @@
 
     <!-- Sign In -->
     <div class="container__form container--signin">
-        <form action="#" class="form" id="form2">
+        <form action="<?=site_url('auth.php?action=login')?>" method="post" class="form" id="form2">
             <h2 class="form__title">Sign In</h2>
             <label>
-                <input type="email" placeholder="Email" class="input" />
+                <input type="email" name="email-in" placeholder="Email" class="input" required />
             </label>
             <label>
-                <input type="password" placeholder="Password" class="input" />
+                <input type="password" name="pass-in" placeholder="Password" class="input" required />
             </label>
             <a href="#" class="link">Forgot your password?</a>
             <button class="btn">Sign In</button>
@@ -57,5 +58,6 @@
 <script src='<?=site_url('assets/vendor/jquery.min.js')?>'></script>
 <script src='<?=site_url('assets/vendor/sweetalert2.js')?>'></script>
 <script src="<?=site_url('assets/js/script.js')?>"></script>
+
 </body>
 </html>

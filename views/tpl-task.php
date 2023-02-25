@@ -12,9 +12,9 @@
     <div class="pageHeader">
         <div class="title">Dashboard</div>
         <div class="userPanel">
-            <i class="fa fa-chevron-down"></i>
-            <span class="username">Amir Roox</span>
-            <img id="profile-img" src="../assets/img/AMIR ROOX.png" alt="profile"/>
+            <a href="?LogOut=1"><i class="fa fa-sign-out"></i></a>
+            <span class="username"><?= $_SESSION['user_login']['name'] ?></span>
+            <img id="profile-img" src="<?=$grav_url?>" alt="profile"/>
         </div>
     </div>
     <div class="main">

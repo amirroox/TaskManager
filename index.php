@@ -3,9 +3,15 @@
 include "bootstrap/init.php";
 //$current_self_page = $_SERVER['PHP_SELF'] ;
 
-if(!is_Loggin()){
+if(isset($_GET['LogOut'])) {
+    unset($_SESSION['user_login']);
+}
+
+if(!is_Login()){
     header('Location:'.site_url('auth.php'));
 }
+
+$grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $_SESSION['user_login']['email'] ) ) );
 
 /* Delete Folder Validation */
 if(isset($_GET['Delete_folder']) && is_numeric($_GET['Delete_folder'])) {

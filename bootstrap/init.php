@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include "constants.php";
 include MAIN_DIR."/bootstrap/config.php";
 include MAIN_DIR."/vendor/autoload.php";
